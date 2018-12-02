@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document sans nom</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="validetta/validetta.css" rel="stylesheet" type="text/css" media="screen" >
+</head>
+
+<body>
+<div class="text-center top">
+	<h1>Formulaire</h1>
+</div>
+<div class="container">
+	<div class="row">
+	<div class="col-12">
+	<div class="row text-center">
+		<div class="col-6 choix"><button class="inscription selection">S'inscrire</button></div>
+		<div class="col-6 choix"><button class="connexion selection">Se connecter</button></div>
+	</div>
+	</div>
+		<div class="col-12 formulaire inscr">
+			<h2 class="text-center">S'inscrire</h2>
+			<form class="form">
+			<div class="row">
+				<div class="col-6"><input class="form-control" name="prenom" id="prenom" placeholder="Prenom" data-validetta="required"></div>
+				<div class="col-6"><input class="form-control" name="nom" id="nom" placeholder="Nom" data-validetta="required"></div>
+				<div class="col-12"><input type="text" id="datepicker" class="form-control" placeholder="Date" data-validetta="required"></div>
+				<div class="col-6"><input id="cp" placeholder="Code postal" class="form-control" data-validetta="required,number"></div>
+				<div class="col-6"><input id="ville" placeholder="Ville" class="form-control" data-validetta="required"></div>
+				<div class="col-12"><input class="form-control" name="mail" id="maili" placeholder="Mail" data-validetta="required,email"></div>
+				<div class="col-12"><input type="password" class="form-control" name="mdp" id="mdpi" placeholder="Mot de passe" data-validetta="required,minLength[5]"></div>
+				<div class="col-12"><input type="password" class="form-control" name="cmdp" id="cmdpi" placeholder=" Confirmation mot de passe" data-validetta="required,equalTo[mdp]"></div>
+				<div class="col-12">
+					<input type="checkbox" id="scales" name="scales" data-validetta="required">
+					<label for="scales">Accepter les conditions générales</label>
+				</div><!--col-12 condition-->
+				<div class=" col-12 text-center"><button type="submit">S'inscrire</button></div>
+			</div>
+			</div><!--col-6-->
+			</form>
+		<div class="col-12 formulaire conn">
+			<h2 class="text-center">Se connecter</h2>
+			<form class="form">
+				<div class="col-12"><input class="form-control" name="mail" id="mailc" placeholder="Mail" data-validetta="required,email"></div>
+				<div class="col-12"><input type="password" class="form-control" name="mdp" id="mdpc" placeholder="Mot de passe" data-validetta="required"></div>
+				<div class="text-center"><button type="submit">Se connecter</button></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/validetta.js"></script>
+<script src="js/validettaLang-fr-FR.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
